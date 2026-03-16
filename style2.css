@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #ffffff; /* Белоснежный фон */
+    background-image: linear-gradient(-45deg, transparent 50%, rgba(218, 165, 32, 0.1) 50%), linear-gradient(45deg, transparent 50%, rgba(255, 0, 0, 0.05) 50%);
+    background-size: 200px 200px; /* Размеры клеток сетки */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left; /* Выравнивание по левому краю */
+    
+}
+
+h1, h2, label {
+    color: goldenrod; /* Золотой заголовок */
+    font-weight: bold; /* ЖИРНЫЙ шрифт */
+}
+
+/* Уменьшаем отступы между абзацами */
+p {
+    margin-bottom: 10px; /* Уменьшили отступ между абзацами */
+}
+
+header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.logo {
+    width: 100px; /* Маленький логотип */
+    height: auto;
+}
+
+.container {
+    margin: 0 auto;
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.field-container.full-width {
+    width: 100%; /* Полное пространство */
+    margin-bottom: 30px; /* Увеличенный отступ снизу */
+}
+
+.fields-row {
+    display: flex;
+    justify-content: space-evenly; /* Равномерное распределение полей */
+    align-items: stretch;
+    margin-bottom: 15px;
+}
+
+.inline-field {
+    flex-grow: 1; /* Поля растянутся равномерно */
+    margin-right: 10px;
+}
+
+.inline-field:last-child {
+    margin-right: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid blue; /* Синяя граница вокруг полей */
+}
+
+button {
+    background-color: #0066CC;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid blue; /* Синяя граница вокруг кнопки */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0055BB;
+}
+
+/* Стили для карусели */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: auto; /* Высота зависит от контента */
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto; /* Высота автоматически регулируется */
+    object-fit: contain; /* предотвратить обрезку */
+    display: none;
+    transition: opacity 0.5s ease;
+}
+
+.carousel img.active {
+    display: block;
+    opacity: 1;
+}
+
+.carousel img.fadeout {
+    opacity: 0;
+}
+
+@media(max-width: 768px){
+    body {
+        padding: 10px;
+    }
+    .fields-row {
+        flex-wrap: wrap; /* перенос строки на мобильных устройствах */
+    }
+    .inline-field {
+        min-width: calc(50% - 10px); /* пространство для отступов */
+    }
+}
