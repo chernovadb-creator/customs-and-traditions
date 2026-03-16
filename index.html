@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Образовательные мероприятия о культуре и традициях народов России</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <header class="header">
+          <img src="Куб.png" alt="Логотип" class="logo">
+      </header>
+
+      <div class="container">
+          <h1>Образовательные мероприятия о культуре и традициях народов России</h1>
+          <h2 style="color: Blue;">Добро пожаловать!</h2>
+          <b><p style="color:Blue;">Поможем организовать увлекательное образовательное мероприятие.</p></b>
+
+        <form id="lessonForm">
+    <div class="field-container">
+        <label for="topic">Тема мероприятия:</label>
+        <select id="topic" required>
+            <option value="">Выберите тему</option>
+            <option value="national-costumes">Национальные костюмы Поволжья</option>
+            <option value="folklore-traditions">Фольклорные традиции народов России</option>
+            <option value="customs-and-traditions">Обычаи народов России</option>
+        </select>
+    </div>
+
+    <div class="fields-row">
+        <div class="inline-field">
+            <label for="age">Возраст аудитории:</label>
+            <select id="age" required>
+                <option value="">Выберите возраст</option>
+                <option value="junior">Начальная школа</option>
+                <option value="middle">Средняя школа</option>
+                <option value="senior">Старшая школа</option>
+            </select>
+        </div>
+
+        <div class="inline-field">
+            <label for="duration">Длительность урока:</label>
+            <select id="duration" required>
+                <option value="">Выберите длительность</option>
+                <option value="15min">15 минут</option>
+                <option value="30min">30 минут</option>
+                <option value="40min">40 минут</option>
+            </select>
+        </div>
+
+        <div class="inline-field">
+            <label for="technique">Технические средства:</label>
+            <select id="technique" required>
+                <option value="">Выберите технику</option>
+                <option value="computers">Компьютеры</option>
+                <option value="interactive_board">Интерактивная доска</option>
+                <option value="mobile_devices">Мобильные устройства</option>
+		<option value="online_viktorina">Онлайн-викторина</option>
+            </select>
+        </div>
+    </div>
+
+    <button type="submit" onclick="openScenario()">Открыть сценарий</button>
+</form>
+ <!-- Карусель изображений -->
+          <div class="carousel">
+              <img src="image1.jpg" alt="Слайд 1" class="active">
+              <img src="image2.jpg" alt="Слайд 2">
+              <img src="image3.jpg" alt="Слайд 3">
+              <img src="image4.jpg" alt="Слайд 4">
+          </div>
+      </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
